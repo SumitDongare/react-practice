@@ -3,6 +3,7 @@ import React from 'react'
 export default function Greeting({greet, name}) {
 
  const age = 30;
+ 
   return (
     <div>
       <h1>Greeting Component</h1>
