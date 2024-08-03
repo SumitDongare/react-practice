@@ -2,6 +2,7 @@
 import './App.css';
 import Counter from './counter/Counter';
 import Flag from './flag/Flag';
+import FormExample from './Forms/FormExample';
 import Greeting from './greeting/Greeting';
 import TodoList from './todoList/TodoList';
 import UserList from './userProfile/UserList';
@@ -22,7 +23,8 @@ function App() {
       {/* <Greeting greet="Hello " name="Sumit"></Greeting> */}
       {/* <TodoList></TodoList> */}
       {/* <UserProfile></UserProfile> */}
-      <UserList></UserList>
+      {/* <UserList></UserList> */}
+      <FormExample></FormExample>
     </div>
   );
 }
