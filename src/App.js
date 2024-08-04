@@ -1,5 +1,6 @@
 
 import './App.css';
+import ContextExample from './context/ContextExample';
 import Counter from './counter/Counter';
 import Flag from './flag/Flag';
 import FormikExample from './Formik/FormikExample';
@@ -28,7 +29,8 @@ function App() {
       {/* <UserList></UserList> */}
       {/* <FormExample></FormExample> */}
       {/* <FormikExample></FormikExample> */}
-      <ImageCarousel></ImageCarousel>
+      {/* <ImageCarousel></ImageCarousel> */}
+      <ContextExample></ContextExample>
     </div>
   );
 }
