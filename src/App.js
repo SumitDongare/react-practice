@@ -5,6 +5,7 @@ import Flag from './flag/Flag';
 import FormikExample from './Formik/FormikExample';
 import FormExample from './Forms/FormExample';
 import Greeting from './greeting/Greeting';
+import ImageCarousel from './ImageCarousel/ImageCarousel';
 import TodoList from './todoList/TodoList';
 import UserList from './userProfile/UserList';
 import UserProfile from './userProfile/UserProfile';
@@ -26,7 +27,8 @@ function App() {
       {/* <UserProfile></UserProfile> */}
       {/* <UserList></UserList> */}
       {/* <FormExample></FormExample> */}
-      <FormikExample></FormikExample>
+      {/* <FormikExample></FormikExample> */}
+      <ImageCarousel></ImageCarousel>
     </div>
   );
 }
