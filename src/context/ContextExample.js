@@ -1,12 +1,24 @@
-import React, { useState } from 'react'
+import { toHaveErrorMessage } from '@testing-library/jest-dom/dist/matchers';
+import React, { useContext, useState } from 'react'
+
+const MyContext = React.createContext();
 
 export default function ContextExample() {
     const [theme, setTheme] = useState('light')
 
+
+
   return (
     <div>
       Parent Component : {theme}
-      <ChildComponent theme={theme}></ChildComponent>
+      <MyContext.Provider value={theme}>
+      <ChildComponent></ChildComponent>
+      </MyContext.Provider>
+
+      <button onClick={()=>{
+        setTheme(theme === 'light'?'dark':'light')
+      }}>Change Theme</button>
+
     </div>
   )
 }
@@ -20,8 +32,9 @@ export default function ContextExample() {
  }
 
  function GrandChildComponent(props){
+    const theme = useContext(MyContext)
     return <div>
-     Grand Child : {props.theme}
+     Grand Child : {theme}
 </div>
 
  }
