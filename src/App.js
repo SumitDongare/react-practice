@@ -2,6 +2,7 @@
 import './App.css';
 import Counter from './counter/Counter';
 import Flag from './flag/Flag';
+import FormikExample from './Formik/FormikExample';
 import FormExample from './Forms/FormExample';
 import Greeting from './greeting/Greeting';
 import TodoList from './todoList/TodoList';
@@ -24,7 +25,8 @@ function App() {
       {/* <TodoList></TodoList> */}
       {/* <UserProfile></UserProfile> */}
       {/* <UserList></UserList> */}
-      <FormExample></FormExample>
+      {/* <FormExample></FormExample> */}
+      <FormikExample></FormikExample>
     </div>
   );
 }
