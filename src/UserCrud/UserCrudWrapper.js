@@ -32,10 +32,10 @@ export default function UserCrudWrapper() {
   return (
     <div className="user-crud-wrapper">
         
-            <UserForm user={userToBeUpdated} onUserFormSubmit={(user, id )=>{
+            <UserForm userToBeUpdated={userToBeUpdated} onUserFormSubmit={(user, id )=>{
                     console.log('User Created', user)
                     if(id){
-                        const fUser = usersList.find(userItem => userItem.id == id);
+                        const fUser = usersList.find(userItem => userItem.id === id);
                         fUser.firstName = user.firstName;
                         fUser.lastName = user.lastName;
                         fUser.email = user.email;
@@ -54,7 +54,7 @@ export default function UserCrudWrapper() {
         
         <UserList usersList={usersList} onUserUpdate={(user)=>{
             console.log('updating user', user)
-            setUserToBeUpdated(user)
+            setUserToBeUpdated({...user})
 
         }} onUserDelete={(id)=>{
          const bool = window.confirm("Do you want to Delete?")

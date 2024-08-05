@@ -16,7 +16,7 @@ export default function UserForm({userToBeUpdated, onUserFormSubmit}) {
           onSubmit={(values, {resetForm}) => {
             console.log("Submitted values", values);
             onUserFormSubmit(values, userToBeUpdated?.id )
-            resetForm({firstName:'', lastName:'', email:'', mobile:''})
+            resetForm()
 
           }}
         >

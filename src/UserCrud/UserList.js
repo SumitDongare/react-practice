@@ -27,6 +27,7 @@ export default function UserList({usersList, onUserDelete, onUserUpdate}) {
                     <button onClick={()=>{
                         onUserUpdate(user)
                     }}>Update</button>
+                    
                     <button onClick={()=>{
                         onUserDelete(user.id)
                     }}>Delete</button>
