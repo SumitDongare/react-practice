@@ -1,9 +1,16 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 
 export default function UserList({usersList, onUserDelete, onUserUpdate}) {
+  const navigate = useNavigate();
    
   return (
     <div>
+      <button onClick={()=>{
+        navigate('/users/form')
+      }}>Add New</button>
+      <br></br>
+      <br></br>
        <table>
         <thead>
             <tr>
