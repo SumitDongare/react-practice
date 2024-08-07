@@ -13,6 +13,7 @@ import UseEffectExample from './UseEffect/UseEffectExample';
 import UserList from './userProfile/UserList';
 import UserProfile from './userProfile/UserProfile';
 import UserCrudWrapper from './UserCrud/UserCrudWrapper';
+import TicTacToe from './TicTacToe/TicTacToe';
 
 
 function App() {
@@ -38,7 +39,8 @@ function App() {
       {/* <ContextExample></ContextExample> */}
       {/* <UseEffectExample name={name}></UseEffectExample>
       <button onClick={()=>setName(name + Math.random()*10)}>Change name prop</button> */}
-      <UserCrudWrapper></UserCrudWrapper>
+      {/* <UserCrudWrapper></UserCrudWrapper> */}
+      <TicTacToe></TicTacToe>
     </div>
   );  
 } 

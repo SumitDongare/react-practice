@@ -8,8 +8,8 @@ export default function UserForm({userToBeUpdated, onUserFormSubmit}) {
         <Formik
          enableReinitialize={true}
           initialValues={{
-            firstName: userToBeUpdated?.firstName || "",
-            lastName: userToBeUpdated?.lastName || "",
+            firstName: userToBeUpdated?.firstName || "", 
+            lastName: userToBeUpdated?.lastName || "", 
             email: userToBeUpdated?.email ||"",
             mobile:userToBeUpdated?.mobile ||""
           }}
@@ -18,7 +18,7 @@ export default function UserForm({userToBeUpdated, onUserFormSubmit}) {
             onUserFormSubmit(values, userToBeUpdated?.id )
             resetForm()
 
-          }}
+          }} 
         >
            
                <Form>

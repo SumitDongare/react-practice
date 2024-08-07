@@ -15,10 +15,10 @@ export default function UserCrudWrapper() {
         },
         {
             id:2,
-          firstName: "Virat ",
-          lastName: "Kohli",
-          email: "virat@v.com",
-          mobile: "9999999",
+          firstName: "Virat ", 
+          lastName: "Kohli", 
+          email: "virat@v.com", 
+          mobile: "9999999", 
         },
       ])
 
@@ -33,13 +33,15 @@ export default function UserCrudWrapper() {
     <div className="user-crud-wrapper">
         
             <UserForm userToBeUpdated={userToBeUpdated} onUserFormSubmit={(user, id )=>{
-                    console.log('User Created', user)
+                    console.log('User Created by me', user)
                     if(id){
                         const fUser = usersList.find(userItem => userItem.id === id);
                         fUser.firstName = user.firstName;
                         fUser.lastName = user.lastName;
                         fUser.email = user.email;
-                        fUser.mobile = user.mobile
+                        fUser.mobile = user.mobile 
+
+                        // usersList.push(fUser)
                         setUserToBeUpdated(null)
 
                     }else{
