@@ -1,0 +1,22 @@
+https://redux-toolkit.js.org/tutorials/quick-start
+
+npm install @reduxjs/toolkit react-redux
+
+
+
+- Redux -Centralized Store
+- Store is basically an object
+
+{
+    users : [],
+    posts : [],
+    counter : {
+        count : 0, 
+    }
+}
+
+Difference between Contex and Redux
+- We can debug redux state change.
+- We can't debug value change of context.
+- We have developer tools.
+- Redux can have middlewares.
