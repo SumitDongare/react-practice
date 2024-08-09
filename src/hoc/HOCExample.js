@@ -1,20 +1,23 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import useAuth from "../custom-hooks/UseAuth";
 
 function withAuthentication(WrappedComponent) {
 
   return () => {
-    const [isAuthenticated, setAuth] = useState(false);
-    const navigate = useNavigate();
+     const isAuthenticated = useAuth() 
 
-    useEffect(() => {
-      const token = localStorage.getItem("token");
-      if (token) {
-        setAuth(true);
-      } else {
-        setAuth(false);
-      }
-    }, [navigate]);
+    // const [isAuthenticated, setAuth] = useState(false);
+    // const navigate = useNavigate();
+
+    // useEffect(() => {
+    //   const token = localStorage.getItem("token");
+    //   if (token) {
+    //     setAuth(true);
+    //   } else {
+    //     setAuth(false);
+    //   }
+    // }, [navigate]);
 
     return isAuthenticated ?  <WrappedComponent></WrappedComponent>: <div>Your not authorised</div>;
   };
