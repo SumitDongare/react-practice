@@ -17,6 +17,7 @@ import TicTacToe from './TicTacToe/TicTacToe';
 import { Link, Route, Routes, useNavigate } from 'react-router-dom';
 import ReduxStoreExample from './Redux-Store/ReduxStoreExample';
 import CustomHookExample from './custom-hooks/CustomHookExample';
+import { AuthenticatedExampleComponent } from './hoc/HOCExample';
 
 
 function App() {
@@ -49,6 +50,7 @@ function App() {
           <Link to={'/use-effect'}>UseEffectExample</Link>
           <Link to={'/redux-example'}>ReduxSotreExample</Link>
           <Link to={'/custom-hook'}>CustomHookExample</Link>
+          <Link to={'/hoc'}>HOC</Link>
           {/* <Link to={'/greeting-path'}>Greeting</Link> */}
           <button onClick={()=>{
              navigate("/greeting-path")
@@ -74,6 +76,7 @@ function App() {
             <Route path='/use-effect' element={<UseEffectExample name={name}></UseEffectExample>}></Route>
             <Route path='/redux-example' element={<ReduxStoreExample></ReduxStoreExample>}></Route>
             <Route path='/custom-hook' element = {<CustomHookExample></CustomHookExample>}></Route>
+            <Route path='/hoc' element={<AuthenticatedExampleComponent></AuthenticatedExampleComponent>}></Route>
             
             <Route path='*' element={<div>This url is not mapped</div>}></Route>
 

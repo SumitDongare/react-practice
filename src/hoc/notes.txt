@@ -1,0 +1,6 @@
+- HOC - Higher Order Component
+
+What?
+A Higher-Order Component (HOC) is a pattern in React where a function takes a component as input and returns 
+a new component with additional props or behavior. 
+It's a way to reuse component logic and share it across different parts of your application.
